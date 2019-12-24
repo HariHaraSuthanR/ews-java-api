@@ -143,7 +143,7 @@ public final class GetEventsResults {
                 eventElementName);
           } else {
             this.loadNotificationEventFromXml(reader,
-                eventElementName, eventType);
+                eventElementName, eventType, this.newWatermark);
           }
         } else {
           reader.skipCurrentElement();
@@ -164,7 +164,7 @@ public final class GetEventsResults {
    * @throws Exception the exception
    */
   private void loadNotificationEventFromXml(EwsServiceXmlReader reader,
-      String eventElementName, EventType eventType) throws Exception {
+      String eventElementName, EventType eventType, String watermark) throws Exception {
     Date date = reader.readElementValue(Date.class, XmlNamespace.Types,
         XmlElementNames.TimeStamp);
 
@@ -173,9 +173,9 @@ public final class GetEventsResults {
     reader.read();
 
     if (reader.getLocalName().equals(XmlElementNames.FolderId)) {
-      notificationEvent = new FolderEvent(eventType, date);
+      notificationEvent = new FolderEvent(eventType, date, watermark);
     } else {
-      notificationEvent = new ItemEvent(eventType, date);
+      notificationEvent = new ItemEvent(eventType, date, watermark);
     }
 
     notificationEvent.loadFromXml(reader, eventElementName);
@@ -205,7 +205,7 @@ public final class GetEventsResults {
    *
    * @return the new watermark
    */
-  protected String getNewWatermark() {
+  public String getNewWatermark() {
     return newWatermark;
   }
 
@@ -215,7 +215,7 @@ public final class GetEventsResults {
    *
    * @return true, if is more events available
    */
-  protected boolean isMoreEventsAvailable() {
+  public boolean isMoreEventsAvailable() {
     return moreEventsAvailable;
   }
 

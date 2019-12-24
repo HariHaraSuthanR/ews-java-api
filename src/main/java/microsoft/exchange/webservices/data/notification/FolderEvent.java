@@ -45,7 +45,7 @@ public class FolderEvent extends NotificationEvent {
    * The old folder id.
    */
   private FolderId oldFolderId;
-
+  
   /**
    * The new number of unread messages. This is is only meaningful when
    * EventType is equal to EventType.Modified. For all other event types, it's
@@ -60,7 +60,11 @@ public class FolderEvent extends NotificationEvent {
    * @param timestamp the timestamp
    */
   protected FolderEvent(EventType eventType, Date timestamp) {
-    super(eventType, timestamp);
+	    super(eventType, timestamp);
+}
+  
+  protected FolderEvent(EventType eventType, Date timestamp, String watermark) {
+    super(eventType, timestamp, watermark);
   }
 
   /**

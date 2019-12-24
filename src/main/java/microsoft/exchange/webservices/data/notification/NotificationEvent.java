@@ -44,8 +44,18 @@ public abstract class NotificationEvent {
    * Date and time when the event occurred.
    */
   private Date timestamp;
+  
+  private String watermark;
 
-  /**
+  public String getWatermark() {
+	return watermark;
+}
+
+public void setWatermark(String watermark) {
+	this.watermark = watermark;
+}
+
+/**
    * Id of parent folder of the item or folder this event applies to.
    */
   private FolderId parentFolderId;
@@ -64,9 +74,17 @@ public abstract class NotificationEvent {
    * @param eventType the event type
    * @param timestamp the timestamp
    */
+  
   protected NotificationEvent(EventType eventType, Date timestamp) {
+	    this.eventType = eventType;
+	    this.timestamp = timestamp;
+	  }
+
+  
+  protected NotificationEvent(EventType eventType, Date timestamp, String watermark) {
     this.eventType = eventType;
     this.timestamp = timestamp;
+    this.watermark = watermark;
   }
 
   /**

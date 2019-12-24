@@ -54,8 +54,12 @@ public final class ItemEvent extends NotificationEvent {
    * @param eventType the event type
    * @param timestamp the timestamp
    */
+  
   protected ItemEvent(EventType eventType, Date timestamp) {
-    super(eventType, timestamp);
+	    super(eventType, timestamp);
+	  }
+  protected ItemEvent(EventType eventType, Date timestamp, String watermark) {
+    super(eventType, timestamp, watermark);
   }
 
   /**
