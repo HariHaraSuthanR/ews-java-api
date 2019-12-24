@@ -50,4 +50,7 @@ public enum ExchangeVersion {
    * Exchange2010_SP2.
    */
   Exchange2010_SP2,
+  
+  
+  Exchange2013
 }
