@@ -115,7 +115,7 @@
             <!-- handle broken builds on jdk1.8 due to doclint function -->
             <id>default-jdk18-profile</id>
             <activation>
-                <jdk>[1.8,)</jdk>
+                <jdk>[11,)</jdk>
             </activation>
             <properties>
                 <javadoc.doclint.param>-Xdoclint:none</javadoc.doclint.param>
@@ -125,7 +125,7 @@
             <!-- maven-checkstyle-plugin required Java 7 or later -->
             <id>java-7-or-later-profile</id>
             <activation>
-                <jdk>[1.7,)</jdk>
+                <jdk>[11,)</jdk>
             </activation>
             <build>
                 <plugins>
@@ -290,6 +290,11 @@
             <version>${slf4j.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>javax.xml.ws</groupId>
+            <artifactId>jaxws-api</artifactId>
+            <version>2.3.1</version>
+        </dependency>
 
     </dependencies>
 
@@ -348,7 +353,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
+<!--            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>animal-sniffer-maven-plugin</artifactId>
                 <version>${animal-sniffer-maven-plugin.version}</version>
@@ -368,7 +373,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin>-->
 
             <plugin>
                 <groupId>org.jacoco</groupId>
