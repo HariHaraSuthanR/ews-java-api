@@ -128,7 +128,7 @@ public final class ExecuteDiagnosticMethodResponse extends ServiceResponse {
         //ite = ele.getNamespaces();
         Iterator<Namespace> ite1 = ele.getNamespaces();
         while (ite1.hasNext()) {
-          Namespace ns = (Namespace) ite.next();
+          Namespace ns = (Namespace) ite1.next();
           String name = ns.getPrefix();
           if (!name.isEmpty()) {
             element.setAttributeNS(xmlns, name,
