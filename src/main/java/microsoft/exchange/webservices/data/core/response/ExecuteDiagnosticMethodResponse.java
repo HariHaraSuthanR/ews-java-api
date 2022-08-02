@@ -125,8 +125,9 @@ public final class ExecuteDiagnosticMethodResponse extends ServiceResponse {
         }
 
         String xmlns = EwsUtilities.WSTrustFebruary2005Namespace;//"http://schemas.xmlsoap.org/wsdl/";
-        ite = ele.getNamespaces();
-        while (ite.hasNext()) {
+        //ite = ele.getNamespaces();
+        Iterator<Namespace> ite1 = ele.getNamespaces();
+        while (ite1.hasNext()) {
           Namespace ns = (Namespace) ite.next();
           String name = ns.getPrefix();
           if (!name.isEmpty()) {
