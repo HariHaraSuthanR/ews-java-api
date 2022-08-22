@@ -115,7 +115,7 @@
             <!-- handle broken builds on jdk1.8 due to doclint function -->
             <id>default-jdk18-profile</id>
             <activation>
-                <jdk>[11,)</jdk>
+                <jdk>[1.8,)</jdk>
             </activation>
             <properties>
                 <javadoc.doclint.param>-Xdoclint:none</javadoc.doclint.param>
