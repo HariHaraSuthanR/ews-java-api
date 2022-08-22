@@ -125,7 +125,7 @@
             <!-- maven-checkstyle-plugin required Java 7 or later -->
             <id>java-7-or-later-profile</id>
             <activation>
-                <jdk>[11,)</jdk>
+                <jdk>[1.7,)</jdk>
             </activation>
             <build>
                 <plugins>
