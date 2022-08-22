@@ -323,7 +323,7 @@
                     <target>${javaLanguage.version}</target>
                 </configuration>
             </plugin>
-            <plugin>
+<!--             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>${maven-javadoc-plugin.version}</version>
@@ -339,7 +339,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin> -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
@@ -438,7 +438,7 @@
             </plugin>
 
             <!-- Generates the Javadoc for the report. -->
-            <plugin>
+<!--             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>${maven-javadoc-plugin.version}</version>
@@ -446,7 +446,7 @@
                     <linksource>true</linksource>
                     <additionalparam>${javadoc.doclint.param}</additionalparam>
                 </configuration>
-            </plugin>
+            </plugin> -->
 
             <!-- Generates a nice HTML linked source cross-reference. -->
             <plugin>
