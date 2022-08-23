@@ -76,7 +76,7 @@
         <!-- Eliminates the file encoding warning. Of course, all of your files
             should probably be UTF-8 nowadays. -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <javaLanguage.version>1.6</javaLanguage.version>
+        <javaLanguage.version>11</javaLanguage.version>
         <javadoc.doclint.param/>
 
         <!--  Dependencies [BUILD]:  -->
@@ -115,7 +115,7 @@
             <!-- handle broken builds on jdk1.8 due to doclint function -->
             <id>default-jdk18-profile</id>
             <activation>
-                <jdk>[1.8,)</jdk>
+                <jdk>[11,)</jdk>
             </activation>
             <properties>
                 <javadoc.doclint.param>-Xdoclint:none</javadoc.doclint.param>
@@ -328,9 +328,8 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>${maven-javadoc-plugin.version}</version>
                 <configuration>
-                    <source>8</source>
                     <detectJavaApiLink>false</detectJavaApiLink>
-                    <linksource>true</linksource>
+<!--                     <linksource>true</linksource> -->
                     <additionalparam>${javadoc.doclint.param}</additionalparam>
                 </configuration>
                 <executions>
