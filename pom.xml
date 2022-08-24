@@ -323,13 +323,13 @@
                     <target>${javaLanguage.version}</target>
                 </configuration>
             </plugin>
-             <plugin>
+<!--              <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>${maven-javadoc-plugin.version}</version>
                 <configuration>
                     <detectJavaApiLink>false</detectJavaApiLink>
-<!--                     <linksource>true</linksource> -->
+                    <linksource>true</linksource> -->
                     <additionalparam>${javadoc.doclint.param}</additionalparam>
                 </configuration>
                 <executions>
@@ -354,7 +354,7 @@
                     </execution>
                 </executions>
             </plugin>
-<!--            <plugin>
+            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>animal-sniffer-maven-plugin</artifactId>
                 <version>${animal-sniffer-maven-plugin.version}</version>
@@ -374,7 +374,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>-->
+            </plugin>    -->
 
             <plugin>
                 <groupId>org.jacoco</groupId>
