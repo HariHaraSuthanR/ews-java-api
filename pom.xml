@@ -329,7 +329,7 @@
                 <version>${maven-javadoc-plugin.version}</version>
                 <configuration>
                     <detectJavaApiLink>false</detectJavaApiLink>
-                    <linksource>true</linksource> -->
+                    <linksource>true</linksource> 
                     <additionalparam>${javadoc.doclint.param}</additionalparam>
                 </configuration>
                 <executions>
